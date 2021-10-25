@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 import DropDown from "./components/DropDown";
+import Blobity from "blobity";
 
 import BubbleSort from "./sortingAlgorithms/BubbleSort";
 import SelectionSort from "./sortingAlgorithms/SelectionSort";
 
 export default function App() {
   const [userSelection, setUserSelection] = useState("");
+
+  const options = {
+    color: "rgb(255, 255, 255)",
+    magnetic: false,
+    zIndex: 50,
+    mode: "bouncy",
+    opacity: "0.1",
+  };
+  new Blobity(options);
 
   return (
     <>
